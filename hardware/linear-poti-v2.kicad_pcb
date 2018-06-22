@@ -3,7 +3,7 @@
   (general
     (links 36)
     (no_connects 0)
-    (area 109.309499 66.309499 194.690501 91.690501)
+    (area 108.644999 65.644999 283.02204 165.61816)
     (thickness 1.6002)
     (drawings 12)
     (tracks 119)
@@ -15,11 +15,11 @@
   (page A4)
   (title_block
     (title "Linear Poti Bricklet")
-    (date 2016-03-04)
-    (rev 1.2)
+    (date 2018-06-22)
+    (rev 2.0)
     (company "Tinkerforge GmbH")
     (comment 1 "Licensed under CERN OHL v.1.1")
-    (comment 2 "Copyright (©) 2016, B.Nordmeyer <bastian@tinkerforge.com>")
+    (comment 2 "Copyright (©) 2018, L.Lauer <lukas@tinkerforge.com>")
   )
 
   (layers
@@ -43,7 +43,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.2)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -6557,8 +6557,8 @@
   (gr_arc (start 112 69) (end 109.5 69) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 112 89) (end 112 91.5) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 192 69) (end 192 66.5) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_text "Copyright Tinkerforge GmbH 2011.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions" (at 258.97586 159.67456) (layer Cmts.User)
-    (effects (font (size 0.8001 0.8001) (thickness 0.20066)))
+  (gr_text "Copyright Tinkerforge GmbH 2018.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions" (at 258.97586 159.67456) (layer Cmts.User)
+    (effects (font (size 0.8001 0.8001) (thickness 0.200025)))
   )
   (gr_text tinkerforge.com (at 129.30124 87.5538) (layer F.SilkS)
     (effects (font (size 1.00076 1.00076) (thickness 0.14986)))
