@@ -31,7 +31,7 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=slide-poti.net
 [pcbnew/libraries]
-LibDir=/home/batti/batti.biz/kicad-libraries;kicad-libraries
+LibDir=kicad-libraries
 LibName1=sockets
 LibName2=connect
 LibName3=discret
