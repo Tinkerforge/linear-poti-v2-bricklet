@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:linear-poti-v2-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -366,7 +365,7 @@ Wire Wire Line
 NoConn ~ 4550 3600
 NoConn ~ 4550 3500
 NoConn ~ 4550 3100
-NoConn ~ 4550 5500
+NoConn ~ 4550 3300
 NoConn ~ 4550 5600
 NoConn ~ 4550 5800
 NoConn ~ 4550 5900
@@ -489,16 +488,12 @@ Wire Wire Line
 	8950 3050 8950 2800
 Wire Wire Line
 	8950 2800 8850 2800
-Text GLabel 4250 3500 0    47   Input ~ 0
+Text GLabel 4300 5500 0    47   Input ~ 0
 IN_1
 Wire Wire Line
 	4550 4600 4300 4600
-Wire Wire Line
-	4250 3500 4300 3500
-Wire Wire Line
-	4300 3500 4300 3300
-Wire Wire Line
-	4300 3300 4550 3300
 NoConn ~ 4550 5700
 NoConn ~ 4550 6000
+Wire Wire Line
+	4550 5500 4300 5500
 $EndSCHEMATC
