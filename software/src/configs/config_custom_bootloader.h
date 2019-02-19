@@ -25,8 +25,6 @@
 
 #include "xmc_gpio.h"
 
-// TODO: CHECK ALL DEFINES!!!
-
 // --- Basic defines ---
 #define BOOTLOADER_DEVICE_IDENTIFIER   2139
 #define BOOTLOADER_HW_VERSION_MAJOR    1
@@ -38,6 +36,8 @@
 
 #define BOOTLOADER_FLASH_EEPROM_SIZE   (4*256)
 #define BOOTLOADER_FLASH_SIZE          (16*1024 - BOOTLOADER_FLASH_EEPROM_SIZE)
+
+#define BOOTLOADER_FIX_POINTER_END
 
 // --- SPITFP ---
 #define SPITFP_USIC_CHANNEL         USIC0_CH0

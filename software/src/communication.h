@@ -1,5 +1,5 @@
 /* linear-poti-v2-bricklet
- * Copyright (C) 2018 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
  * communication.h: TFP protocol message handling
  *
@@ -34,6 +34,12 @@ void communication_tick(void);
 void communication_init(void);
 
 // Constants
+#define LINEAR_POTI_V2_THRESHOLD_OPTION_OFF 'x'
+#define LINEAR_POTI_V2_THRESHOLD_OPTION_OUTSIDE 'o'
+#define LINEAR_POTI_V2_THRESHOLD_OPTION_INSIDE 'i'
+#define LINEAR_POTI_V2_THRESHOLD_OPTION_SMALLER '<'
+#define LINEAR_POTI_V2_THRESHOLD_OPTION_GREATER '>'
+
 #define LINEAR_POTI_V2_BOOTLOADER_MODE_BOOTLOADER 0
 #define LINEAR_POTI_V2_BOOTLOADER_MODE_FIRMWARE 1
 #define LINEAR_POTI_V2_BOOTLOADER_MODE_BOOTLOADER_WAIT_FOR_REBOOT 2
@@ -53,7 +59,11 @@ void communication_init(void);
 #define LINEAR_POTI_V2_STATUS_LED_CONFIG_SHOW_STATUS 3
 
 // Function and callback IDs and structs
+#define FID_GET_POSITION 1
+#define FID_SET_POSITION_CALLBACK_CONFIGURATION 2
+#define FID_GET_POSITION_CALLBACK_CONFIGURATION 3
 
+#define FID_CALLBACK_POSITION 4
 
 
 
@@ -61,11 +71,12 @@ void communication_init(void);
 
 
 // Callbacks
-
+bool handle_position_callback(void);
 
 #define COMMUNICATION_CALLBACK_TICK_WAIT_MS 1
-#define COMMUNICATION_CALLBACK_HANDLER_NUM 0
+#define COMMUNICATION_CALLBACK_HANDLER_NUM 1
 #define COMMUNICATION_CALLBACK_LIST_INIT \
+	handle_position_callback, \
 
 
 #endif

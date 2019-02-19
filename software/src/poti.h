@@ -1,7 +1,7 @@
-/* linear-poti-v2-bricklet
- * Copyright (C) 2018 Olaf Lüke <olaf@tinkerforge.com>
+/* rotary-poti-v2-bricklet
+ * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
- * main.c: Initialization for Linear Poti Bricklet 2.0
+ * poti.h: Potentiometer driver
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,27 +19,14 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <stdio.h>
-#include <stdbool.h>
+#ifndef POTI_H
+#define POTI_H
 
-#include "configs/config.h"
+#include <stdint.h>
 
-#include "bricklib2/bootloader/bootloader.h"
-#include "bricklib2/hal/system_timer/system_timer.h"
-#include "bricklib2/logging/logging.h"
-#include "communication.h"
-#include "poti.h"
+void poti_init(void);
+void poti_tick(void);
 
-int main(void) {
-	logging_init();
-	logd("Start Linear Poti Bricklet 2.0\n\r");
+uint8_t poti_get_value(void);
 
-	communication_init();
-	poti_init();
-
-	while(true) {
-		bootloader_tick();
-		communication_tick();
-		poti_tick();
-	}
-}
+#endif

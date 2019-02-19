@@ -1,7 +1,7 @@
-/* linear-poti-v2-bricklet
- * Copyright (C) 2018 Olaf Lüke <olaf@tinkerforge.com>
+/* motorized-linear-poti-bricklet
+ * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
  *
- * main.c: Initialization for Linear Poti Bricklet 2.0
+ * config_poti.h: Poti configuration
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,27 +19,12 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <stdio.h>
-#include <stdbool.h>
+#ifndef CONFIG_POTI_H
+#define CONFIG_POTI_H
 
-#include "configs/config.h"
+#define POTI_ADC_CHANNEL      6 // P2_1
 
-#include "bricklib2/bootloader/bootloader.h"
-#include "bricklib2/hal/system_timer/system_timer.h"
-#include "bricklib2/logging/logging.h"
-#include "communication.h"
-#include "poti.h"
+#define POTI_ADC_IRQ          15
+#define POTI_ADC_IRQ_PRIORITY 0
 
-int main(void) {
-	logging_init();
-	logd("Start Linear Poti Bricklet 2.0\n\r");
-
-	communication_init();
-	poti_init();
-
-	while(true) {
-		bootloader_tick();
-		communication_tick();
-		poti_tick();
-	}
-}
+#endif

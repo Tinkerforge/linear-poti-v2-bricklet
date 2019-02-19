@@ -1,5 +1,5 @@
 /* linear-poti-v2-bricklet
- * Copyright (C) 2018 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
  * communication.c: TFP protocol message handling
  *
@@ -24,23 +24,34 @@
 #include "bricklib2/utility/communication_callback.h"
 #include "bricklib2/protocols/tfp/tfp.h"
 
+#include "poti.h"
+
+
+#define CALLBACK_VALUE_TYPE CALLBACK_VALUE_TYPE_UINT8
+#include "bricklib2/utility/callback_value.h"
+CallbackValue_uint8_t callback_value_position;
+
+
 BootloaderHandleMessageResponse handle_message(const void *message, void *response) {
 	switch(tfp_get_fid_from_message(message)) {
-
+		case FID_GET_POSITION: return get_callback_value_uint8_t(message, response, &callback_value_position);
+		case FID_SET_POSITION_CALLBACK_CONFIGURATION: return set_callback_value_callback_configuration_uint8_t(message, &callback_value_position);
+		case FID_GET_POSITION_CALLBACK_CONFIGURATION: return get_callback_value_callback_configuration_uint8_t(message, response, &callback_value_position);
 		default: return HANDLE_MESSAGE_RESPONSE_NOT_SUPPORTED;
 	}
 }
 
 
-
-
-
-
+bool handle_position_callback(void) {
+	return handle_callback_value_callback_uint8_t(&callback_value_position, FID_CALLBACK_POSITION);
+}
 
 void communication_tick(void) {
 	communication_callback_tick();
 }
 
 void communication_init(void) {
+	callback_value_init_uint8_t(&callback_value_position, poti_get_value);
+
 	communication_callback_init();
 }
