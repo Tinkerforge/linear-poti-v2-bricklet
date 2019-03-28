@@ -1,0 +1,9 @@
+# Change XYZ to the UID of your Linear Poti Bricklet 2.0
+
+setup:
+	# Handle incoming position callbacks
+	subscribe to tinkerforge/callback/linear_poti_v2_bricklet/XYZ/position
+	publish '{"register": true}' to tinkerforge/register/linear_poti_v2_bricklet/XYZ/position # Register position callback
+	
+	# Set period for position callback to 0.25s (250ms) without a threshold
+	publish '{"period": 250, "value_has_to_change": false, "option": "off", "min": 0, "max": 0}' to tinkerforge/request/linear_poti_v2_bricklet/XYZ/set_position_callback_configuration

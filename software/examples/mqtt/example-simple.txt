@@ -1,0 +1,6 @@
+# Change XYZ to the UID of your Linear Poti Bricklet 2.0
+
+setup:
+	# Get current position
+	subscribe to tinkerforge/response/linear_poti_v2_bricklet/XYZ/get_position
+	publish '' to tinkerforge/request/linear_poti_v2_bricklet/XYZ/get_position
