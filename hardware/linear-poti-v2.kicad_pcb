@@ -169,6 +169,11 @@
     (pad "" thru_hole circle (at -31.39948 -4.09956 180) (size 1.69926 1.69926) (drill 1.69926) (layers *.Cu *.Mask F.SilkS))
     (pad "" thru_hole circle (at 32.6009 4.24942 180) (size 1.69926 1.69926) (drill 1.69926) (layers *.Cu *.Mask F.SilkS))
     (pad "" thru_hole circle (at -32.6009 4.24942 180) (size 1.69926 1.69926) (drill 1.69926) (layers *.Cu *.Mask F.SilkS))
+    (model Potentiometers/F6005N.step
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Logo_31x31 (layer Vorderseite) (tedit 4F1D86B0) (tstamp 4CE53660)
