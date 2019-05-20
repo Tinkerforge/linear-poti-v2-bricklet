@@ -1,4 +1,5 @@
-use std::{error::Error, io, thread};
+use std::thread;
+use std::{error::Error, io};
 use tinkerforge::{ip_connection::IpConnection, linear_poti_v2_bricklet::*};
 
 const HOST: &str = "localhost";
