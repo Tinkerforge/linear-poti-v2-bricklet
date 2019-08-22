@@ -33,7 +33,7 @@ int main(void) {
 	// Register position callback to function cb_position
 	linear_poti_v2_register_callback(&lp,
 	                                 LINEAR_POTI_V2_CALLBACK_POSITION,
-	                                 (void *)cb_position,
+	                                 (void (*)(void))cb_position,
 	                                 NULL);
 
 	// Set period for position callback to 0.25s (250ms) without a threshold
