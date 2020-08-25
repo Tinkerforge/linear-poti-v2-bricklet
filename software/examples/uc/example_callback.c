@@ -1,5 +1,3 @@
-
-
 #include "bindings/hal_common.h"
 #include "bindings/bricklet_linear_poti_v2.h"
 
@@ -7,15 +5,12 @@
 
 void check(int rc, const char* msg);
 
-
-
 // Callback function for position callback
 void position_handler(TF_LinearPotiV2 *device, uint8_t position, void *user_data) {
 	(void)device; (void)user_data; // avoid unused parameter warning
 
 	tf_hal_printf("Position: %u °\n", position);
 }
-
 
 TF_LinearPotiV2 lp;
 
