@@ -13,7 +13,7 @@ void example_loop(TF_HalContext *hal);
 static void position_handler(TF_LinearPotiV2 *device, uint8_t position, void *user_data) {
 	(void)device; (void)user_data; // avoid unused parameter warning
 
-	tf_hal_printf("Position: %u °\n", position);
+	tf_hal_printf("Position: %I8u °\n", position);
 }
 
 static TF_LinearPotiV2 lp;

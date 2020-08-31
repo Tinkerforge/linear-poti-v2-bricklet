@@ -19,7 +19,7 @@ void example_setup(TF_HalContext *hal) {
 	uint8_t position;
 	check(tf_linear_poti_v2_get_position(&lp, &position), "get position");
 
-	tf_hal_printf("Position: %u °\n", position);
+	tf_hal_printf("Position: %I8u °\n", position);
 }
 
 void example_loop(TF_HalContext *hal) {
