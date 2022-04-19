@@ -9,13 +9,13 @@
 
 void check(int rc, const char* msg);
 
-void example_setup(TF_HalContext *hal);
-void example_loop(TF_HalContext *hal);
+void example_setup(TF_HAL *hal);
+void example_loop(TF_HAL *hal);
 
 
 static TF_LinearPotiV2 lp;
 
-void example_setup(TF_HalContext *hal) {
+void example_setup(TF_HAL *hal) {
 	// Create device object
 	check(tf_linear_poti_v2_create(&lp, UID, hal), "create device object");
 
@@ -23,10 +23,10 @@ void example_setup(TF_HalContext *hal) {
 	uint8_t position;
 	check(tf_linear_poti_v2_get_position(&lp, &position), "get position");
 
-	tf_hal_printf("Position: %I8u °\n", position);
+	tf_hal_printf("Position: %I8u %%\n", position);
 }
 
-void example_loop(TF_HalContext *hal) {
+void example_loop(TF_HAL *hal) {
 	// Poll for callbacks
 	tf_hal_callback_tick(hal, 0);
 }
