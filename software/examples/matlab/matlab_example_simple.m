@@ -14,7 +14,7 @@ function matlab_example_simple()
 
     % Get current position
     position = lp.getPosition();
-    fprintf('Position: %i °\n', position);
+    fprintf('Position: %i %%\n', position);
 
     input('Press key to exit\n', 's');
     ipcon.disconnect();

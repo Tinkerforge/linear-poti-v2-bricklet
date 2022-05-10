@@ -15,7 +15,7 @@ Module ExampleSimple
 
         ' Get current position
         Dim position As Byte = lp.GetPosition()
-        Console.WriteLine("Position: " + position.ToString() + " °")
+        Console.WriteLine("Position: " + position.ToString() + " %")
 
         Console.WriteLine("Press key to exit")
         Console.ReadLine()

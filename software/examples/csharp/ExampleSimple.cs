@@ -17,7 +17,7 @@ class Example
 
 		// Get current position
 		byte position = lp.GetPosition();
-		Console.WriteLine("Position: " + position + " °");
+		Console.WriteLine("Position: " + position + " %");
 
 		Console.WriteLine("Press enter to exit");
 		Console.ReadLine();

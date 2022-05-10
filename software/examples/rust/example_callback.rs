@@ -19,7 +19,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // is dropped, so there is no need for manual cleanup.
     thread::spawn(move || {
         for position in position_receiver {
-            println!("Position: {} °", position);
+            println!("Position: {} %", position);
         }
     });
 

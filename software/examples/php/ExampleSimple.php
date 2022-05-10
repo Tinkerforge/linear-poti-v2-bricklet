@@ -18,7 +18,7 @@ $ipcon->connect(HOST, PORT); // Connect to brickd
 
 // Get current position
 $position = $lp->getPosition();
-echo "Position: $position °\n";
+echo "Position: $position %\n";
 
 echo "Press key to exit\n";
 fgetc(fopen('php://stdin', 'r'));

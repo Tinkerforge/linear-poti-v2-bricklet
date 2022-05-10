@@ -50,7 +50,7 @@
                 lp.on(Tinkerforge.BrickletLinearPotiV2.CALLBACK_POSITION,
                     // Callback function for position callback
                     function (position) {
-                        textArea.value += 'Position: ' + position + ' °\n';
+                        textArea.value += 'Position: ' + position + ' %\n';
                         textArea.scrollTop = textArea.scrollHeight;
                     }
                 );

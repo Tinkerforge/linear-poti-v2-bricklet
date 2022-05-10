@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     # Get current position
     position = lp.get_position()
-    print("Position: " + str(position) + " °")
+    print("Position: " + str(position) + " %")
 
     input("Press key to exit\n") # Use raw_input() in Python 2
     ipcon.disconnect()

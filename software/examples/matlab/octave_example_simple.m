@@ -13,7 +13,7 @@ function octave_example_simple()
 
     % Get current position
     position = lp.getPosition();
-    fprintf("Position: %d °\n", position);
+    fprintf("Position: %d %%\n", position);
 
     input("Press key to exit\n", "s");
     ipcon.disconnect();

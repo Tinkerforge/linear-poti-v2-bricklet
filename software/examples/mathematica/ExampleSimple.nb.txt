@@ -11,7 +11,7 @@ lp=NETNew["Tinkerforge.BrickletLinearPotiV2",uid,ipcon]
 ipcon@Connect[host,port]
 
 (*Get current position*)
-Print["Position: "<>ToString[N[Quantity[lp@GetPosition[],"°"]]]]
+Print["Position: "<>ToString[N[Quantity[lp@GetPosition[],"%"]]]]
 
 (*Clean up*)
 ipcon@Disconnect[]

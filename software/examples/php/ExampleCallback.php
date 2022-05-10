@@ -13,7 +13,7 @@ const UID = 'XYZ'; // Change XYZ to the UID of your Linear Poti Bricklet 2.0
 // Callback function for position callback
 function cb_position($position)
 {
-    echo "Position: $position °\n";
+    echo "Position: $position %\n";
 }
 
 $ipcon = new IPConnection(); // Create IP connection

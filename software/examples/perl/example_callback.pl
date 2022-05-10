@@ -13,7 +13,7 @@ sub cb_position
 {
     my ($position) = @_;
 
-    print "Position: $position °\n";
+    print "Position: $position %\n";
 }
 
 my $ipcon = Tinkerforge::IPConnection->new(); # Create IP connection

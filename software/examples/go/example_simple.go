@@ -20,7 +20,7 @@ func main() {
 
 	// Get current position.
 	position, _ := lp.GetPosition()
-	fmt.Printf("Position:  °\n", position)
+	fmt.Printf("Position:  %%\n", position)
 
 	fmt.Print("Press enter to exit.")
 	fmt.Scanln()

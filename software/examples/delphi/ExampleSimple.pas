@@ -38,7 +38,7 @@ begin
 
   { Get current position }
   position := lp.GetPosition;
-  WriteLn(Format('Position: %d °', [position]));
+  WriteLn(Format('Position: %d %%', [position]));
 
   WriteLn('Press key to exit');
   ReadLn;

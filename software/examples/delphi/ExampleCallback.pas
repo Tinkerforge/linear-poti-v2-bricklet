@@ -27,7 +27,7 @@ var
 { Callback procedure for position callback }
 procedure TExample.PositionCB(sender: TBrickletLinearPotiV2; const position: byte);
 begin
-  WriteLn(Format('Position: %d °', [position]));
+  WriteLn(Format('Position: %d %%', [position]));
 end;
 
 procedure TExample.Execute;

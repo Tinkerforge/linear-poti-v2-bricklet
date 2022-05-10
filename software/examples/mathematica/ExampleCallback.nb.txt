@@ -12,7 +12,7 @@ ipcon@Connect[host,port]
 
 (*Callback function for position callback*)
 PositionCB[sender_,position_]:=
- Print["Position: "<>ToString[N[Quantity[position,"°"]]]]
+ Print["Position: "<>ToString[N[Quantity[position,"%"]]]]
 AddEventHandler[lp@PositionCallback,PositionCB]
 
 (*Set period for position callback to 0.25s (250ms) without a threshold*)

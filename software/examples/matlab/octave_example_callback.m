@@ -23,5 +23,5 @@ end
 
 % Callback function for position callback
 function cb_position(e)
-    fprintf("Position: %d °\n", e.position);
+    fprintf("Position: %d %%\n", e.position);
 end

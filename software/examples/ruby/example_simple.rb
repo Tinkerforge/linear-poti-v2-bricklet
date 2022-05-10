@@ -18,7 +18,7 @@ ipcon.connect HOST, PORT # Connect to brickd
 
 # Get current position
 position = lp.get_position
-puts "Position: #{position} °"
+puts "Position: #{position} %"
 
 puts 'Press key to exit'
 $stdin.gets
